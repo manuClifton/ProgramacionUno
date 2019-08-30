@@ -2,9 +2,11 @@
 #include <stdlib.h>
 
 int getMax(int a, int b,  int c);
+int getInt();
 int getInt200500();
 int getIntRango(int min, int max);
 
+///////////////////////////////////////////////////////////////////////////////////////////
 int main()
 {
     int max;
@@ -12,18 +14,23 @@ int main()
     int num2;
     int numMin = 1;
     int numMax = 10;
+    int num3;
 
 
-        max = getMax( 1, 1, 0);
+        max = getMax( 2, 1, 0);
         num = getInt200500();
         num2 = getIntRango(numMin, numMax);
+        num3 = getInt();
 
         printf("El maximo es: %d \n\n", max);
         printf("El numero es: %d\n\n", num);
         printf("El numero es: %d\n\n", num2);
+        printf("El numero es: %d\n\n", num3);
 
     return 0;
 }
+
+///////////////////////////////////////////////////////////////////////////////////////
 
 int getMax(int a, int b,  int c){
     int max;
@@ -65,6 +72,16 @@ int getIntRango(int min, int max){
             printf("Error. Reingese numero entre %d y %d: ", min, max);
             scanf("%d", &num);
         }
+
+    return num;
+}
+
+int getInt(){
+     int num;
+
+        printf("Ingese numero: ");
+        scanf("%d", &num);
+        printf("\n");
 
     return num;
 }
