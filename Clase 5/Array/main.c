@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define TAM 5
+
 void mostrarVectorInt(int vec[], int tam);
 int obtenerMayor(int vec[], int tam);
+void obtenerIndice(int vec[]n int tam, int num);
 
 
 int main()
@@ -26,13 +29,14 @@ int main()
             }
     }*/
     max = obtenerMayor(numeros, 5);
+    obtenerIndice(numeros, TAM, max)
 
     for(int i = 0; i < 5; i++){
         suma += numeros[i];
     }
         printf("\n la suma es: %d", suma);
 
-         printf("\n el maximo es %d y el indice es %d", max, index);
+        printf("\n el maximo es %d y el indice es %d", max, index);
 
     return 0;
 }
@@ -55,6 +59,15 @@ int obtenerMayor(int vec[], int tam){
                 flag = 1;
             }
         }
-
     return max;
+}
+
+void obtenerIndice(int vec[] int tam, int num){
+    int index;
+     for(int i=0; i<tam; i++){
+        if( vec[i] = num){
+            index = i;
+        }
+
+
 }
