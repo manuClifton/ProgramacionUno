@@ -33,8 +33,6 @@ int getIntRange(int* numero, char* mensaje,char* mensajeError,int min, int max,i
     printf("%s", mensaje);
     scanf("%d", &auxiliar);
 
-
-
         while(auxiliar < min || auxiliar > max ){
             intentos--;
                 if(intentos == 0){
@@ -47,8 +45,5 @@ int getIntRange(int* numero, char* mensaje,char* mensajeError,int min, int max,i
         if(intentos != 0){
             *numero = auxiliar;
         }
-
     return todoOk;
-
-
 }

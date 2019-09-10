@@ -9,7 +9,7 @@ int main()
     char nombre[10] = "Juan";
 
     mostrarVectorChar(nombre, 10);
-   printf("%s \t ", vocales);
+   printf("%s", vocales);
 
     return 0;
 }
