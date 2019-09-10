@@ -9,7 +9,7 @@ int main()
     char nombre[10] = "Juan";
 
     mostrarVectorChar(nombre, 10);
-  // printf("%s", vocales);
+   printf("%s \t ", vocales);
 
     return 0;
 }
@@ -17,7 +17,9 @@ int main()
 void mostrarVectorChar( char vec[], int tam){
 
     for(int i = 0; i < tam; i++){
-        printf("%d ", vec[i]);
+        //printf("%d ", vec[i]);
+        //printf("%s ", vec[i]);
+        printf("%c ", vec[i]);
     }
     printf("\n\n");
 }
