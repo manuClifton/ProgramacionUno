@@ -37,6 +37,7 @@ void pedirVector(int vec[], int tam){
     }
 }
 
+
 void mostrarVectorInt(int vec[], int tam){
     for(int i=0; i<tam; i++){
         printf("%d ", vec[i]);
@@ -49,6 +50,7 @@ int sumarVector(int vec[], int tam){
     int suma = 0;
      for(int i = 0; i < tam; i++){
             suma =  suma + vec[i];
+            printf("%d", vec[i]);
         }
     return suma;
 }
@@ -67,11 +69,11 @@ int obtenerMayor(int vec[], int tam){
 }
 
 int obtenerIndice(int vec[], int tam, int num){
-    int index;
+    int index = -1;
      for(int i=0; i<tam; i++){
-        if( vec[i] = num){
-            index = i;
-            break;
+        if( vec[i] == num){
+            index = i+1;
         }
  }
+ return index;
 }
