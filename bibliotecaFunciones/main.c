@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <ctype.h>
 #include <conio.h>
 #include "Funciones.h"
@@ -65,20 +66,14 @@ int main()
 int getString(char* strig,char message[],char messageError[], int lowLimit, int hiLimit, int attempts){
 
 
-    char aux[50];
+    char aux[100];
     int todoOk = 1;
-    int i=0;
 
     printf("%s", message);
     fflush(stdin);
     scanf("%s", aux);
 
-     while (aux[i] != '\0'){
-            printf ("%c", aux[i]);
-            i++;
-     }
-
-        while(i < lowLimit || i > hiLimit ){
+        while(strlen(aux) < lowLimit || strlen(aux) > hiLimit ){
             attempts--;
                 if(attempts == 0){
                         todoOk = 0;
@@ -89,7 +84,7 @@ int getString(char* strig,char message[],char messageError[], int lowLimit, int 
             scanf("%s", aux);
         }
         if(attempts != 0){
-            strig = aux;
+            strcpy(strig, aux);
         }
     return todoOk;
 }
