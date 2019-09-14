@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1568428727 source:c:\users\manu_\desktop\practicacadenas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+

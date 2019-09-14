@@ -16,6 +16,7 @@ int main()
     int nota2[TAM] = {8, 9 ,10, 2, 3};
     float promedios[TAM] = {8, 9, 10, 2, 3};
     char sexos[TAM] = {'f', 'm', 'f', 'm', 'f'};
+    char nombres[5][20];
 
     printf("Muestro el listado: \n\n");
     mostrarAlumnos(legajos, sexos, edades, nota1, nota2, promedios, TAM);
