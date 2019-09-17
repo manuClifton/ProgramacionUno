@@ -5,7 +5,7 @@
 #include <conio.h>
 #include "Funciones.h"
 
-int getString(char* strig,char message[],char messageError[], int lowLimit, int hiLimit, int attempts);
+
 
 
 int main()
@@ -13,7 +13,7 @@ int main()
     // Pedir entero
     int numInt;
     int todoOkInt;
-    todoOkInt = getIntRange(&numInt,"Ingrese numero Entero: ", "Error. Reingrese un numero valido: ",0,10,3);
+    todoOkInt = getIntRange(&numInt,"Ingrese numero Entero entre 0 y 10: ", "Error. Reingrese un numero valido: ",0,10,3);
 
     if(todoOkInt == 0){
         printf("No se pudo cargar la nota.\n");
@@ -25,7 +25,7 @@ int main()
     float numFloat;
     int todoOkFloat;
 
-    todoOkFloat = getFloat(&numFloat, "Ingrese numero Flotante: ","Error. Reingrese un numero valido: ",0,10,3);
+    todoOkFloat = getFloat(&numFloat, "Ingrese numero Flotante entre 0 y 10: ","Error. Reingrese un numero valido: ",0,10,3);
 
     if(todoOkFloat == 0){
         printf("No se pudo cargar el numero.\n");
@@ -63,28 +63,3 @@ int main()
 }
 
 
-int getString(char* strig,char message[],char messageError[], int lowLimit, int hiLimit, int attempts){
-
-
-    char aux[100];
-    int todoOk = 1;
-
-    printf("%s", message);
-    fflush(stdin);
-    scanf("%s", aux);
-
-        while(strlen(aux) < lowLimit || strlen(aux) > hiLimit ){
-            attempts--;
-                if(attempts == 0){
-                        todoOk = 0;
-                    break;
-                }
-            printf("%s", messageError);
-            fflush(stdin);
-            scanf("%s", aux);
-        }
-        if(attempts != 0){
-            strcpy(strig, aux);
-        }
-    return todoOk;
-}

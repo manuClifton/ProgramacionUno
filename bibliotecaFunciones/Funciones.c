@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+#include <string.h>
 #include "Funciones.h"
 
 int getIntRange(int* number, char* message,char* messageError,int lowLimit, int hiLimit, int attempts){
@@ -78,3 +78,66 @@ int getChar(char* input,char* message,char* messageError, char lowLimit, char hi
         }
     return todoOk;
 }
+
+
+
+int getString(char* strig,char message[],char messageError[], int lowLimit, int hiLimit, int attempts){
+
+
+    char aux[100];
+    int todoOk = 1;
+
+    printf("%s", message);
+    fflush(stdin);
+    scanf("%s", aux);
+
+        while(strlen(aux) < lowLimit || strlen(aux) > hiLimit ){
+            attempts--;
+                if(attempts == 0){
+                        todoOk = 0;
+                    break;
+                }
+            printf("%s", messageError);
+            fflush(stdin);
+            scanf("%s", aux);
+        }
+        if(attempts != 0){
+            strcpy(strig, aux);
+        }
+    return todoOk;
+}
+
+
+
+int comparaFecha(eFecha f1, eFecha f2){
+    int rta;
+
+        if(f1.anio < f2.anio){
+            rta = -1;
+        }
+        else if(f1.anio > f2.anio){
+            rta = 1;
+        }
+         else {
+            if(f1.mes < f2.mes){
+                rta = -1;
+            }
+            else if( f1.mes > f2.mes ){
+                 rta = 1;
+            }
+            else{
+                if(f1.dia < f2.dia){
+                     rta = -1;
+                }
+                else if ( f1.dia > f2.dia ){
+                    rta = 1;
+                }
+                else{
+                    rta = 0;
+                }
+            }
+    }
+
+    return rta;
+}
+
