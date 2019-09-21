@@ -62,7 +62,7 @@ typedef struct{
  * \param  tipo de dato estructura de eFecha
  * \param  tipo de dato estructura de eFecha
  * \return [-1] si fecha1 < fecha2, [0] si fecha1 = fecha2, [1] si fecha1 > fecha2
- */
+ */https://github.com/manuClifton/ProgramacionUno.git
 int comparaFecha(eFecha f1, eFecha f2);
 
 
