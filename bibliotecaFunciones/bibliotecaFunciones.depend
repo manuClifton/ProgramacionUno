@@ -30,7 +30,7 @@
 	<conio.h>
 	"Funciones.h"
 
-1568682007 source:c:\users\manu_\desktop\programacionuno\bibliotecafunciones\main.c
+1569281115 source:c:\users\manu_\desktop\programacionuno\bibliotecafunciones\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -38,9 +38,9 @@
 	<conio.h>
 	"Funciones.h"
 
-1568682034 c:\users\manu_\desktop\programacionuno\bibliotecafunciones\funciones.h
+1569280847 c:\users\manu_\desktop\programacionuno\bibliotecafunciones\funciones.h
 
-1568682055 source:c:\users\manu_\desktop\programacionuno\bibliotecafunciones\funciones.c
+1569285543 source:c:\users\manu_\desktop\programacionuno\bibliotecafunciones\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>

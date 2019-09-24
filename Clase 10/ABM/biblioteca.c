@@ -1,57 +1,52 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
-#include "Funciones.h"
+#include <conio.h>
 
-int getIntRange(int* number, char* message,char* messageError,int lowLimit, int hiLimit, int attempts){
+#include "biblioteca.h"
+
+int getIntRange(int* number, char* message,char* messageError,int lowLimit, int hiLimit){
 
     int aux;
-    int todoOk = 1;
-
+    int todoOk = 0;
     printf("%s", message);
+    fflush(stdin);
     scanf("%d", &aux);
 
         while(aux < lowLimit || aux > hiLimit ){
-            attempts--;
-                if(attempts == 0){
-                        todoOk = 0;
-                    break;
-                }
+
             printf("%s", messageError);
+             fflush(stdin);
             scanf("%d", &aux);
         }
-        if(attempts != 0){
+        if(aux >= lowLimit && aux <= hiLimit ){
             *number = aux;
+            todoOk = 1;
         }
-    return todoOk;
+        return todoOk;
 }
-////
 
-int getFloat(float* number, char* message,char* messageError,float lowLimit, float hiLimit, int attempts){
+int getFloat(float* number, char* message,char* messageError,float lowLimit, float hiLimit){
     float aux;
     int todoOk = 1;
 
     printf("%s", message);
+     fflush(stdin);
     scanf("%f", &aux);
 
         while(aux < lowLimit || aux > hiLimit ){
-            attempts--;
-                if(attempts == 0){
-                        todoOk = 0;
-                    break;
-                }
             printf("%s", messageError);
             scanf("%f", &aux);
         }
-        if(attempts != 0){
+        if(aux >= lowLimit && aux <= hiLimit ){
             *number = aux;
         }
     return todoOk;
 }
 
-/////
-int getChar(char* input,char* message,char* messageError, char lowLimit, char hiLimit, int attempts){
+int getCharSex(char* input,char* message,char* messageError, char lowLimit, char hiLimit){
 
     char aux;
     int todoOk = 1;
@@ -61,29 +56,22 @@ int getChar(char* input,char* message,char* messageError, char lowLimit, char hi
     scanf("%c", &aux);
     aux = toupper(aux);
 
-        while(aux < lowLimit || aux > hiLimit ){
-            attempts--;
-                if(attempts == 0){
-                        todoOk = 0;
-                    break;
-                }
+        while(aux != lowLimit && aux != hiLimit ){
             printf("%s", messageError);
             fflush(stdin);
             scanf("%c", &aux);
             aux = toupper(aux);
         }
-        if(attempts != 0){
+        if(aux == lowLimit || aux == hiLimit ){
             *input = aux;
         }
     return todoOk;
 }
 
 
-
 int getString(char* strig,char message[],char messageError[], int lowLimit, int hiLimit, int attempts){
 
-
-    char aux[100];
+    char aux[100];  // PREGUNTAR PORQUE SOLO TOMA HASTA EL ESPACIO.
     int todoOk = 1;
 
     printf("%s", message);
@@ -139,4 +127,5 @@ int comparaFecha(eFecha f1, eFecha f2){
 
     return rta;
 }
+
 
