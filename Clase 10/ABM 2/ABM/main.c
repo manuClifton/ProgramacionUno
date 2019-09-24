@@ -28,7 +28,7 @@ void mostrarAlumno( eAlumno al);
 void mostrarAlumnos(eAlumno vec[], int tam);
 void inicializarAlumnos(eAlumno vec[], int tam);
 eAlumno newAlumno(int leg, char nombre[], int edad, char sexo, int nota1, int nota2, eFecha fecha);
-int altaAlumno(eAlumno vec[], int tam);
+int altaAlumno(eAlumno vec[], int tam, int leg);
 int bajaAlumno(eAlumno vec[], int tam);
 int buscarLibre(eAlumno vec[], int tam);
 int buscarAlumno(eAlumno vec[], int tam, int legajo);
@@ -38,8 +38,12 @@ int menu();
 
 int main()
 {
+    int legajos = 20000;
     eAlumno lista[TAM];
     inicializarAlumnos(lista, TAM);
+
+    hardcodearAlumnos(lista, TAM, 5);
+    legajos = legajos + hardcodearAlumnos(lista, TAM, 5);
 
     char salir = 'n';
 
@@ -48,8 +52,10 @@ int main()
         switch(menu()){
 
         case 1:
-            printf("Alta alumno");
-            altaAlumno(lista, TAM);
+            if(altaAlumno(lista, TAM, legajos)){
+                legajos++;
+            }
+
             break;
         case 2:
             printf("Baja alumno");
@@ -164,12 +170,10 @@ void mostrarAlumno( eAlumno al){
 }
 
 
-int altaAlumno(eAlumno vec[], int tam){
+int altaAlumno(eAlumno vec[], int tam, int leg){
     int todoOk = 0;
     int indice;
-    int esta;
 
-    int legajo;
     char nombre[20];
     int edad;
     char sexo;
@@ -187,16 +191,6 @@ int altaAlumno(eAlumno vec[], int tam){
             printf("NO HAY LUGAR EN EL SISTEMA \n\n");
         }
         else{
-            printf("Ingrese legajo: ");
-            scanf("%d", &legajo);
-
-            esta = buscarAlumno(vec, tam, legajo);
-
-            if(esta != -1){
-                printf("EL ALUMNO YA EXISTE!! \n\n");
-            }
-            else{
-
                 printf("Ingrese Nombre: ");
                 fflush(stdin);
                 gets(nombre);
@@ -217,10 +211,9 @@ int altaAlumno(eAlumno vec[], int tam){
                 printf("Ingrese Fecha de Ingreso dd/mm/aaaa: ");
                 scanf("%d/%d/%d", &fecha.dia, &fecha.mes, &fecha.anio );
 
-                vec[indice] = newAlumno(legajo, nombre, edad, sexo, nota1, nota2, fecha);
+                vec[indice] = newAlumno(leg, nombre, edad, sexo, nota1, nota2, fecha);
 
                 todoOk = 1;
-            }
         }
 
     return todoOk;
@@ -281,7 +274,50 @@ int bajaAlumno(eAlumno vec[], int tam){
 
 
 int modificarAlumno(eAlumno vec[], int tam){
+ int todoOk = 0;
+    int legajo;
+    int indice;
+    char confirma;
+    system("cls");
+    printf("***** Modificar Alumno *****\n\n");
+    printf("Ingrese legajo: ");
+    scanf("%d", &legajo);
+    int opcion;
 
+    indice = buscarAlumno(legajo, vec , tam);
+
+    if( indice == -1){
+        printf("No existe un alumno con ese legajo\n\n");
+
+    }
+    else{
+
+        mostrarAlumno(vec[indice]);
+
+        printf("1- Modificar nota1\n");
+        printf("2- Modificar nota2\n");
+        printf("3- Salir\n\n");
+        printf("Ingrese opcion: ");
+        scanf("%d", &opcion);
+        switch(opcion){
+    case 1:
+        printf("Ingrese nueva nota: ");
+        scanf("%d", &vec[indice].nota1);
+        vec[indice].promedio = (float) (vec[indice].nota1  + vec[indice].nota2)/2;
+        break;
+
+    case 2:
+        printf("Ingrese nueva nota: ");
+        scanf("%d", &vec[indice].nota2);
+        vec[indice].promedio = (float) (vec[indice].nota1  + vec[indice].nota2)/2;
+        break;
+    case 3:
+        printf("Se ha cancelado la mofdificacion ");
+        break;
+
+        }
+    }
+    return todoOk;
 }
 int hardcodearAlumnos( eAlumno vec[], int tam, int cantidad){
      int cont = 0;
