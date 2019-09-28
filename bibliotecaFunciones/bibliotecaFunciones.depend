@@ -14,15 +14,16 @@
 	<conio.h>
 	"Funciones.h"
 
-1568411200 source:c:\users\alumno\desktop\programacionuno\bibliotecafunciones\funciones.c
+1569621001 source:c:\users\alumno\desktop\programacionuno\bibliotecafunciones\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
+	<string.h>
 	"Funciones.h"
 
-1568411200 c:\users\alumno\desktop\programacionuno\bibliotecafunciones\funciones.h
+1569620751 c:\users\alumno\desktop\programacionuno\bibliotecafunciones\funciones.h
 
-1568421015 source:c:\users\alumno\desktop\programacionuno\bibliotecafunciones\main.c
+1569620751 source:c:\users\alumno\desktop\programacionuno\bibliotecafunciones\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

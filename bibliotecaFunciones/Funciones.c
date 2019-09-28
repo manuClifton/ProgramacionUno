@@ -88,7 +88,7 @@ int getString(char* strig,char message[],char messageError[], int lowLimit, int 
 
     printf("%s", message);
     fflush(stdin);
-    scanf("%s", aux);
+    gets(aux);
 
         while(strlen(aux) < lowLimit || strlen(aux) > hiLimit ){
             attempts--;
@@ -98,7 +98,7 @@ int getString(char* strig,char message[],char messageError[], int lowLimit, int 
                 }
             printf("%s", messageError);
             fflush(stdin);
-            scanf("%s", aux);
+            gets(aux);
         }
         if(attempts != 0){
             strcpy(strig, aux);
