@@ -35,12 +35,13 @@ int menu();
 void mostrarComida(eComida comida);
 void mostrarComidas(eComida comidas[], int tam);
 int cargarDescComida(int id, eComida comidas[], int tam, char desc[]);
+
+
 void inicializarAlmuerzos(eAlmuerzo almuerzos[], int tam);
 int hardcodearAlmuerzos( eAlmuerzo vec[], int tam, int cantidad);
 void mostrarAlmuerzos(eAlmuerzo almuerzos[],int tam, eComida comidas[], int tamC);
 void mostrarAlmuerzo(eAlmuerzo almuerzo, eComida comidas[], int tamC);
 int buscarAlmuerzoLibre(eAlmuerzo vec[], int tam);
-
 eAlmuerzo newAlmuerzo(int id, int idComida, int legajo, eFecha fecha);
 int altaAlmuerzo(int idAlmuerzo, eAlmuerzo almuerzos[], int tamAlm, eComida comidas[], int tamCom, eAlumno alumnos[], int tamAlumno, eCarrera carreras[], int tamCarr);
 
@@ -244,7 +245,7 @@ void mostrarAlmuerzo(eAlmuerzo almuerzo, eComida comidas[], int tamC){
 
     cargarDescComida(almuerzo.idComida, comidas, tamC, descComida );
 
-    printf(" %d  %s    %d    %d     %d/%d/%d \n\n", almuerzo.id, descComida, almuerzo.legajo, almuerzo.idComida, almuerzo.fecha.dia, almuerzo.fecha.mes, almuerzo.fecha.anio);
+    printf(" %d      %10s       %2d       %d/%d/%d \n\n", almuerzo.id, descComida, almuerzo.legajo, almuerzo.fecha.dia, almuerzo.fecha.mes, almuerzo.fecha.anio);
 }
 
 
@@ -254,8 +255,8 @@ void mostrarAlmuerzos(eAlmuerzo almuerzos[],int tam, eComida comidas[], int tamC
 
     system("cls");
 
-    printf("\n  ID    COMIDA      LEGAJO     FECHA\n");
-    printf("***********************************\n");
+    printf("\n  ID            COMIDA      LEGAJO       FECHA\n");
+    printf("************************************************\n");
 
 
     for(int i=0; i<tam; i++){

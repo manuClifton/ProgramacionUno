@@ -51,3 +51,27 @@
 	<stdio.h>
 	<string.h>
 
+1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\baus\abmalumnocarrerasfullfull\alumno.c
+	"alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1569881292 c:\users\manu_\desktop\programacionuno\clase 12\baus\abmalumnocarrerasfullfull\alumno.h
+	"carrera.h"
+
+1569881292 c:\users\manu_\desktop\programacionuno\clase 12\baus\abmalumnocarrerasfullfull\carrera.h
+
+1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\baus\abmalumnocarrerasfullfull\carrera.c
+	"carrera.h"
+	<stdio.h>
+	<string.h>
+
+1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\baus\abmalumnocarrerasfullfull\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"alumno.h"
+	"carrera.h"
+

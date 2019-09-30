@@ -280,3 +280,59 @@
 	"biblioteca.h"
 	"Informes.h"
 
+1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\alumno.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"alumno.h"
+	"biblioteca.h"
+
+1569881292 c:\users\manu_\desktop\programacionuno\clase 12\abm\alumno.h
+	"carrera.h"
+
+1569881292 c:\users\manu_\desktop\programacionuno\clase 12\abm\carrera.h
+
+1569881292 c:\users\manu_\desktop\programacionuno\clase 12\abm\biblioteca.h
+	"alumno.h"
+
+1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"biblioteca.h"
+
+1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"carrera.h"
+
+1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"Informes.h"
+
+1569881292 c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.h
+	"carrera.h"
+	"alumno.h"
+
+1569881499 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"carrera.h"
+	"alumno.h"
+	"biblioteca.h"
+	"Informes.h"
+
