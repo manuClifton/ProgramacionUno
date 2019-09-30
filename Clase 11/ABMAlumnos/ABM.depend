@@ -92,3 +92,30 @@
 	"carrera.h"
 	"alumno.h"
 
+1569627563 source:c:\users\manu_\desktop\programacionuno\clase 11\abmalumnos\alumno.c
+	"alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569627563 c:\users\manu_\desktop\programacionuno\clase 11\abmalumnos\alumno.h
+	"carrera.h"
+
+1569627563 c:\users\manu_\desktop\programacionuno\clase 11\abmalumnos\carrera.h
+
+1569627563 source:c:\users\manu_\desktop\programacionuno\clase 11\abmalumnos\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+
+1569628131 source:c:\users\manu_\desktop\programacionuno\clase 11\abmalumnos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"carrera.h"
+	"alumno.h"
+

@@ -1,109 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
+#include <ctype.h>
 #include <string.h>
-#include "carrera.h"
-#include "alumno.h"
+#include <conio.h>
 
-#define TAM 10
-#define TAMC 3
+#include "Informes.h"
 
-int menu();
-int menuInformes();
-void mostrarInformes(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC);
 
-void mostrarAlumnosCarreraSeleccionada(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC);
-void mostrarAlumnoPorCarrera(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC, int idCarrera);
-void mostrarAlumnosDeTodasLasCarreras(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC);
 
-int cantidadDeAlumnosPorCarrera(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC, int idCarrera);
-void mostrarCantidaDeAlumnosPorCarrera(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC);
-
-void carrerasInscriptos(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC);
-
-int main()
-{
-    int legajo = 20000;
-    eCarrera carreras[TAMC]={{1000,"TUP"},{1001,"TUSI"},{1002,"LIC"}};
-    eAlumno lista[TAM];
-    char salir = 'n';
-
-    inicializarAlumnos( lista, TAM);
-
-    legajo = legajo + hardcodearAlumnos(lista, TAM, 6);
-
-    do
-    {
-        switch( menu())
-        {
-        case 1:
-            if(altaAlumno(lista, TAM, legajo, carreras, TAMC))
-            {
-                legajo++;
-            }
-            break;
-
-        case 2:
-            bajaAlumno(lista, TAM, carreras, TAMC);
-            break;
-
-        case 3:
-            ModificarAlumno(lista, TAM, carreras, TAMC);
-            break;
-
-        case 4:
-            mostrarAlumnos(lista, TAM, carreras, TAMC);
-            break;
-
-        case 5:
-
-            ordenarAlumnos(lista, TAM);
-            break;
-
-        case 6:
-            //printf("Informes Alumno\n\n");
-            mostrarInformes(lista, TAM, carreras, TAMC);
-
-            break;
-        case 7:
-            mostrarCarreras(carreras, TAMC);
-            break;
-
-        case 8:
-            printf("Confirma salir?:");
-            fflush(stdin);
-            salir = getche();
-            break;
-
-        default:
-            printf("\nOpcion Invalida!\n\n");
-        }
-        system("pause");
-    }
-    while(salir == 'n');
-
-    return 0;
-}
-
-int menu()
-{
-    int opcion;
-
-    system("cls");
-    printf("****** ABM Alumnos *******\n\n");
-    printf("1-Alta alumno\n");
-    printf("2-Baja alumno\n");
-    printf("3-Modificar alumno\n");
-    printf("4-Listar alumnos\n");
-    printf("5-Ordenar alumnos\n");
-    printf("6-Informes alumno\n");
-    printf("7-Mostrar Carreras\n");
-    printf("8-Salir\n\n");
-    printf("Ingrese opcion: ");
-    scanf("%d", &opcion);
-
-    return opcion;
-}
 
 
 int menuInformes(){
@@ -128,7 +32,21 @@ int menuInformes(){
 
 void mostrarInformes(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC){
     char salir = 'n';
-    do{
+    int flag = 0;
+
+    for(int i=0; i<tamA; i++){
+        if(alumnos[i].isEmpty == 0){
+           flag = 1;
+        }
+
+    }
+    if(flag == 0){
+        printf("NO HAY ALUMNOS!!!");
+        printf("\n\n");
+    }
+    else{
+
+        do{
                 switch( menuInformes()){
                 case 1:
                     //printf("1-Mostrar Alumnos de una Carrera\n");
@@ -150,7 +68,8 @@ void mostrarInformes(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC)
                     printf("5-Mostrar mejor Promedio por Carrera\n");
                     break;
                 case 6:
-                    printf("6-Mostrar Alumnos Varones\n");
+                    //printf("6-Mostrar Alumnos Varones\n");
+                    mostrarAlumnosVarones(alumnos, tamA, carreras, tamC);
                     break;
                 case 7:
                     printf("7-Mostrar Mujeres de Alguna carrera\n");
@@ -170,6 +89,7 @@ void mostrarInformes(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC)
             }
             system("pause");
             }while(salir == 'n');
+    }
 }
 
 void mostrarAlumnosDeTodasLasCarreras(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC){
@@ -256,3 +176,25 @@ void carrerasInscriptos(eAlumno alumnos[], int tamA, eCarrera carreras[], int ta
     }
      printf("cantidad incriptos %d\n\n", mayor);
 }
+
+void mostrarAlumnosVarones(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC){
+    int flag = 0;
+
+    system("cls");
+    printf("***** ALUMNOS VARONES  ******** \n\n");
+
+    printf("\n LEGAJO   NOMBRE    EDAD   SEXO   NOTA 1    NOTA 2     PROMEDIO    FECHA INGRESO     CARRERA\n");
+    printf("***********************************************************************************************\n");
+
+    for(int i=0; i<tamA; i++){
+        if(alumnos[i].sexo == 'M'){
+            mostrarAlumno(alumnos[i], carreras, tamA);
+            flag = 1;
+        }
+    }
+    if(flag == 0){
+        printf("\n NO HAY ALUMNOS VARONES!!\n\n");
+    }
+}
+
+
