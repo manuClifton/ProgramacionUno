@@ -317,7 +317,7 @@
 	<conio.h>
 	"carrera.h"
 
-1570201104 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.c
+1570227806 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -326,7 +326,7 @@
 	"Informes.h"
 	"biblioteca.h"
 
-1570200840 c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.h
+1570227564 c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.h
 	"carrera.h"
 	"alumno.h"
 	"almuerzo.h"

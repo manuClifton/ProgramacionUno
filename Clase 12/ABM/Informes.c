@@ -391,7 +391,7 @@ void mostrarCantidaDeAlmuerzosPorCarrera(eAlumno alumnos[], int tamA, eCarrera c
 }
 
 
-int cantidadDeMilangasPorCarrera(eAlmuerzo almuerzos[], int tamAlm, eAlumno alumnos[], int tamA,  eCarrera carreras[], int tamC, int idCarrera){
+int cantidadDeMilangasPorCarrera(eAlmuerzo almuerzos[], int tamAlm, eAlumno alumnos[], int tamA, int idCarrera){
     int contador = 0;
     for(int i=0; i<tamA; i++){
         if(alumnos[i].idCarrera == idCarrera && alumnos[i].isEmpty == 0){
@@ -405,6 +405,7 @@ int cantidadDeMilangasPorCarrera(eAlmuerzo almuerzos[], int tamAlm, eAlumno alum
     return contador;
 }
 
+
 void mostrarAmanteDeMilanesa(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC, eAlmuerzo almuerzos[], int tamAlm){
     int cantidad[tamC];
     int mayor;
@@ -415,7 +416,7 @@ void mostrarAmanteDeMilanesa(eAlumno alumnos[], int tamA, eCarrera carreras[], i
     printf("***** MOSTRAR CANTIDAD DE ALMUERZOS POR CARRERA  ******** \n\n");
 
     for(int i=0; i<tamC; i++){
-        cantidad[i] = cantidadDeAlmuerzosPorCarrera(almuerzos, tamAlm, alumnos, tamA, carreras, tamC, carreras[i].id);
+        cantidad[i] = cantidadDeMilangasPorCarrera(almuerzos, tamAlm, alumnos, tamA, carreras[i].id);
     }
     for(int i=0; i<tamC; i++){
             if(cantidad[i] > mayor || flag ==0){
@@ -423,7 +424,6 @@ void mostrarAmanteDeMilanesa(eAlumno alumnos[], int tamA, eCarrera carreras[], i
                 flag = 1;
 
             }
-        ;
     }
 
     printf("Cantidad de Milanesas %d \n\n", mayor);

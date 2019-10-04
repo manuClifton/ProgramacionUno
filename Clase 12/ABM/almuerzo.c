@@ -5,10 +5,7 @@
 #include <conio.h>
 
 #include "almuerzo.h"
-
-
-
-
+#include "biblioteca.h"
 
 void inicializarAlmuerzos(eAlmuerzo almuerzos[], int tam){
     for(int i=0; i<tam; i++){
@@ -16,16 +13,13 @@ void inicializarAlmuerzos(eAlmuerzo almuerzos[], int tam){
     }
 }
 
-
-
-
 int hardcodearAlmuerzos( eAlmuerzo vec[], int tam, int cantidad){
     int cont = 0;
 
     eAlmuerzo suplentes[]=
     {
         { 60000, 20000, 5000, {12, 10, 2019}, 0},
-        { 60001, 20001, 5001, {10, 10, 2019}, 0},
+        { 60001, 20001, 5004, {10, 10, 2019}, 0},
         { 60002, 20002, 5002, { 9, 10, 2019}, 0},
         { 60003, 20003, 5003, { 2, 10, 2019}, 0},
         { 60004, 20004, 5004, { 1, 10, 2019}, 0},
@@ -81,8 +75,6 @@ void mostrarAlmuerzos(eAlmuerzo almuerzos[],int tam, eComida comidas[], int tamC
 }
 
 
-
-
 int buscarAlmuerzoLibre(eAlmuerzo vec[], int tam){
     int indice = -1;
 
@@ -94,9 +86,6 @@ int buscarAlmuerzoLibre(eAlmuerzo vec[], int tam){
     }
     return indice;
 }
-
-
-
 
 
 int altaAlmuerzo(int idAlmuerzo, eAlmuerzo almuerzos[], int tamAlm, eComida comidas[], int tamCom, eAlumno alumnos[], int tamAlumno, eCarrera carreras[], int tamCarr){
@@ -119,8 +108,6 @@ int altaAlmuerzo(int idAlmuerzo, eAlmuerzo almuerzos[], int tamAlm, eComida comi
         else{
                 mostrarAlumnos(alumnos, tamAlumno, carreras, tamCarr);
 
-                printf("Ingrese Legajo: ");
-                scanf(" %d", &legajo);
                 getInt(&legajo, "Ingrese legajo: ", "Error, Reingrese legajo: ");
 
                 esta = buscarAlumno(alumnos, tamAlumno, legajo);
@@ -150,6 +137,7 @@ int altaAlmuerzo(int idAlmuerzo, eAlmuerzo almuerzos[], int tamAlm, eComida comi
 
     return todoOk;
 }
+
 
 eAlmuerzo newAlmuerzo(int id, int idComida, int legajo, eFecha fecha){
     eAlmuerzo al;
