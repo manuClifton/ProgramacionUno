@@ -3,6 +3,7 @@
 
 #include "alumno.h"
 
+int getInt(int* number, char* message,char* messageError);
 int getIntRange(int* number, char* message,char* messageError,int lowLimit, int hiLimit);
 int getIntCarrera(int* number, char* message,char* messageError,int lowLimit, int mediumLimit, int hiLimit);
 int getFloat(float* number, char* message,char* messageError,float lowLimit, float hiLimit);

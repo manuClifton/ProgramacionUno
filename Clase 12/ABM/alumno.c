@@ -208,8 +208,8 @@ int modificarAlumno(eAlumno vec[], int tam, eCarrera carreras[], int tamC){
 
     int todoOk = 0;
     int legajo;
-    char confirma;
     int indice;
+    int flag = 0;
 
         system("cls");
         printf("******* MODIFICAR *******\n\n");
@@ -233,6 +233,7 @@ int modificarAlumno(eAlumno vec[], int tam, eCarrera carreras[], int tamC){
                     getIntRange(&vec[indice].nota1, "Ingrese nueva Nota 1: ", "Error. Ingrese nueva Nota 1 entre 1 y 10: ", 1, 10);
 
                     vec[indice].promedio = (float) (vec[indice].nota1  + vec[indice].nota2)/2;
+                    flag = 1;
                     break;
 
                 case 2:
@@ -240,24 +241,20 @@ int modificarAlumno(eAlumno vec[], int tam, eCarrera carreras[], int tamC){
                    // scanf("%d", &vec[indice].nota2);
                     getIntRange(&vec[indice].nota2, "Ingrese nueva Nota 2: ", "Error. Ingrese nueva Nota 2 entre 1 y 10: ", 1, 10);
                     vec[indice].promedio = (float) (vec[indice].nota1  + vec[indice].nota2)/2;
+                    flag = 2;
                     break;
                 case 3:
-                    printf("Se ha cancelado la mofdificacion ");
+                    printf("Se ha cancelado la mofdificacion \n\n");
                     break;
-
-            }
-
-            printf("Confirma la baja? ");
-            confirma = getchar();
-            if(confirma == 's'){
-                vec[indice].isEmpty = 1;
-                todoOk = 1;
-                printf("BAJA EXITOSA\n\n");
-            }
-            else{
-                printf(" SE CANCELO LA OPERACION!! \n\n");
             }
         }
+        if(flag == 1){
+            printf("SE MODIFICO NOTA 1 DEL ALUMNO \n\n");
+
+        }else if(flag == 2){
+            printf("SE MODIFICO NOTA 2 DEL ALUMNO \n\n");
+        }
+
         return todoOk;
 }
 

@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Informes.h" />
+		<Unit filename="almuerzo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="almuerzo.h" />
 		<Unit filename="alumno.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -47,6 +51,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="carrera.h" />
+		<Unit filename="comidas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="comidas.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

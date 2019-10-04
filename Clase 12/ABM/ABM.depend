@@ -280,7 +280,7 @@
 	"biblioteca.h"
 	"Informes.h"
 
-1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\alumno.c
+1570189418 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\alumno.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -294,10 +294,10 @@
 
 1569881292 c:\users\manu_\desktop\programacionuno\clase 12\abm\carrera.h
 
-1569881292 c:\users\manu_\desktop\programacionuno\clase 12\abm\biblioteca.h
+1570191247 c:\users\manu_\desktop\programacionuno\clase 12\abm\biblioteca.h
 	"alumno.h"
 
-1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\biblioteca.c
+1570191247 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\biblioteca.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -305,7 +305,7 @@
 	<conio.h>
 	"biblioteca.h"
 
-1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\carrera.c
+1570197091 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\carrera.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -313,19 +313,21 @@
 	<conio.h>
 	"carrera.h"
 
-1569881292 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.c
+1570201104 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	<conio.h>
 	"Informes.h"
+	"biblioteca.h"
 
-1569881292 c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.h
+1570200840 c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.h
 	"carrera.h"
 	"alumno.h"
+	"almuerzo.h"
 
-1569881499 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\main.c
+1570197286 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -335,4 +337,29 @@
 	"alumno.h"
 	"biblioteca.h"
 	"Informes.h"
+	"almuerzo.h"
+	"comidas.h"
+
+1570197092 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\almuerzo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"almuerzo.h"
+
+1570197091 c:\users\manu_\desktop\programacionuno\clase 12\abm\almuerzo.h
+	"comidas.h"
+	"alumno.h"
+	"carrera.h"
+
+1570197091 c:\users\manu_\desktop\programacionuno\clase 12\abm\comidas.h
+
+1570197091 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\comidas.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"comidas.h"
 

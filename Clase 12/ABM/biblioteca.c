@@ -36,6 +36,47 @@ int getIntRange(int* number, char* message,char* messageError,int lowLimit, int 
         return todoOk;
 }
 
+
+
+
+
+int getInt(int* number, char* message,char* messageError){
+
+    char aux[10];
+    int numeroValido;
+    int num;
+    int todoOk = 0;
+
+    printf("%s", message);
+    fflush(stdin);
+    scanf("%s", aux);
+    numeroValido = validarNumero(aux);
+    num = atoi(aux);
+
+        while(numeroValido == 0){
+
+            printf("%s", messageError);
+            fflush(stdin);
+            //scanf("%d", &aux);
+            scanf("%s", aux);
+            numeroValido = validarNumero(aux);
+            num = atoi(aux);
+        }
+        if(num){
+            *number = atoi(aux);
+            todoOk = 1;
+        }
+        return todoOk;
+}
+
+
+
+
+
+
+
+
+
 int validarNumero(char num[]){
     int res = 1;
     for(int i=0; i<strlen(num); i++){
