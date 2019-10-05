@@ -224,7 +224,7 @@
 	"biblioteca.h"
 	"Informes.h"
 
-1569880043 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\alumno.c
+1570226574 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\alumno.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -233,15 +233,15 @@
 	"alumno.h"
 	"biblioteca.h"
 
-1569880043 c:\users\alumno\desktop\programacionuno\clase 12\abm\alumno.h
+1570226574 c:\users\alumno\desktop\programacionuno\clase 12\abm\alumno.h
 	"carrera.h"
 
-1569880043 c:\users\alumno\desktop\programacionuno\clase 12\abm\carrera.h
+1570226574 c:\users\alumno\desktop\programacionuno\clase 12\abm\carrera.h
 
-1569880043 c:\users\alumno\desktop\programacionuno\clase 12\abm\biblioteca.h
+1570226574 c:\users\alumno\desktop\programacionuno\clase 12\abm\biblioteca.h
 	"alumno.h"
 
-1569880043 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\biblioteca.c
+1570226574 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\biblioteca.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -249,7 +249,7 @@
 	<conio.h>
 	"biblioteca.h"
 
-1569880043 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\carrera.c
+1570226574 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\carrera.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -257,19 +257,21 @@
 	<conio.h>
 	"carrera.h"
 
-1569883179 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\informes.c
+1570233493 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	<conio.h>
 	"Informes.h"
+	"biblioteca.h"
 
-1569880043 c:\users\alumno\desktop\programacionuno\clase 12\abm\informes.h
+1570233437 c:\users\alumno\desktop\programacionuno\clase 12\abm\informes.h
 	"carrera.h"
 	"alumno.h"
+	"almuerzo.h"
 
-1569893016 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\main.c
+1570226574 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -279,6 +281,8 @@
 	"alumno.h"
 	"biblioteca.h"
 	"Informes.h"
+	"almuerzo.h"
+	"comidas.h"
 
 1570189418 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\alumno.c
 	<stdio.h>
@@ -356,6 +360,29 @@
 1570197091 c:\users\manu_\desktop\programacionuno\clase 12\abm\comidas.h
 
 1570197091 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\comidas.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"comidas.h"
+
+1570226574 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\almuerzo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"almuerzo.h"
+
+1570226574 c:\users\alumno\desktop\programacionuno\clase 12\abm\almuerzo.h
+	"comidas.h"
+	"alumno.h"
+	"carrera.h"
+
+1570226574 c:\users\alumno\desktop\programacionuno\clase 12\abm\comidas.h
+
+1570226574 source:c:\users\alumno\desktop\programacionuno\clase 12\abm\comidas.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>

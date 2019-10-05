@@ -33,4 +33,9 @@ void alumnosPorComidaSeleccionada(eAlumno alumnos[], int tamA,eAlmuerzo almuerzo
 int cantidadDeAlmuerzosPorCarrera(eAlmuerzo almuerzos[], int tamAlm, eAlumno alumnos[], int tamA,  eCarrera carreras[], int tamC, int idCarrera);
 void mostrarCantidaDeAlmuerzosPorCarrera(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC, eAlmuerzo almuerzos[], int tamAlm);
 
+int cantidadDeMilangasPorCarrera(eAlmuerzo almuerzos[], int tamAlm, eAlumno alumnos[], int tamA,  eCarrera carreras[], int tamC, int idCarrera);
+void mostrarAmanteDeMilanesa(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC, eAlmuerzo almuerzos[], int tamAlm);
+
+void mostrarDeudaAlumno(eAlumno alumnos[], int tamA, eAlmuerzo almuerzos[], int tamAlm, eComida comidas[], int tamCom, eCarrera carreras[], int tamC);
+
 #endif // INFORMES_H_INCLUDED

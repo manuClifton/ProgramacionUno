@@ -98,10 +98,12 @@ void mostrarInformes(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC,
                     mostrarCantidaDeAlmuerzosPorCarrera(alumnos, tamA, carreras, tamC, almuerzos, tamAlm);
                     break;
                 case 12:
-                    printf("12-Carrera amante de las milanesas\n");
+                    //printf("12-Carrera amante de las milanesas\n");
+                    mostrarAmanteDeMilanesa(alumnos, tamA, carreras, tamC, almuerzos, tamAlm);
                     break;
                 case 13:
-                    printf("13-Informe deuda alumno seleccionado\n");
+                    //printf("13-Informe deuda alumno seleccionado\n");
+                    mostrarDeudaAlumno(alumnos, tamA, almuerzos, tamAlm, comidas, tamCom,carreras, tamC);
                     break;
                 case 20:
                     printf("Confirma salir?:");
@@ -235,7 +237,6 @@ void mostrarMejorPromedioPorCarrera(eAlumno alumnos[], int tamA, eCarrera carrer
 
 
         for(int i=0; i<tamC; i++){
-                  printf(" Carera: %s \n", carreras[i].descripcion);
             for(int j=0; j<tamA; j++){
                 if(alumnos[j].idCarrera == carreras[i].id){
                     if( alumnos[j].promedio > mayorPromedio[i] || flag == 0){
@@ -244,21 +245,20 @@ void mostrarMejorPromedioPorCarrera(eAlumno alumnos[], int tamA, eCarrera carrer
                     }
                 }
             }
-            printf(" Alumno: %s,   Promedio: %.2f \n\n", alumnos[i].nombre, alumnos[i].promedio);
             flag = 0;
         }
 
-        /*for(int i=0; i<tamC; i++){
+        for(int i=0; i<tamC; i++){
             printf(" Carera: %s \n", carreras[i].descripcion);
             for(int j=0; j<tamA; j++){
                 if(alumnos[j].idCarrera == carreras[i].id){
                     if(mayorPromedio[i] == alumnos[j].promedio){
-                            printf(" Alumno: %s,   Promedio: %.2f \n\n", alumnos[i].nombre, alumnos[i].promedio);
+                            printf(" Alumno: %s,   Promedio: %.2f \n\n", alumnos[j].nombre, alumnos[j].promedio);
                         //mostrarAlumno(alumnos[j], carreras, tamC);
                     }
                 }
             }
-        }*/
+        }
 }
 
 
@@ -391,8 +391,74 @@ void mostrarCantidaDeAlmuerzosPorCarrera(eAlumno alumnos[], int tamA, eCarrera c
 }
 
 
+int cantidadDeMilangasPorCarrera(eAlmuerzo almuerzos[], int tamAlm, eAlumno alumnos[], int tamA,  eCarrera carreras[], int tamC, int idCarrera){
+    int contador = 0;
+    for(int i=0; i<tamA; i++){
+        if(alumnos[i].idCarrera == idCarrera && alumnos[i].isEmpty == 0){
+                for(int j=0; j<tamAlm; j++){
+                    if(almuerzos[j].legajo == alumnos[i].legajo && almuerzos[j].idComida == 5004){
+                        contador++;
+                    }
+                }
+        }
+    }
+    return contador;
+}
+
+void mostrarAmanteDeMilanesa(eAlumno alumnos[], int tamA, eCarrera carreras[], int tamC, eAlmuerzo almuerzos[], int tamAlm){
+    int cantidad[tamC];
+    int mayor;
+    int flag = 0;
 
 
+    system("cls");
+    printf("***** MOSTRAR CANTIDAD DE ALMUERZOS POR CARRERA  ******** \n\n");
+
+    for(int i=0; i<tamC; i++){
+        cantidad[i] = cantidadDeAlmuerzosPorCarrera(almuerzos, tamAlm, alumnos, tamA, carreras, tamC, carreras[i].id);
+    }
+    for(int i=0; i<tamC; i++){
+            if(cantidad[i] > mayor || flag ==0){
+                mayor = cantidad[i];
+                flag = 1;
+
+            }
+        ;
+    }
+
+    printf("Cantidad de Milanesas %d \n\n", mayor);
+
+    for(int i=0; i<tamC; i++){
+        if(cantidad[i] == mayor){
+            printf("Carreras: %s \n", carreras[i].descripcion);
+        }
+    }
+}
 
 
+void mostrarDeudaAlumno(eAlumno alumnos[], int tamA, eAlmuerzo almuerzos[], int tamAlm, eComida comidas[], int tamCom, eCarrera carreras[], int tamC){
+    float acumulador = 0;
+    int legajo;
+
+    system("cls");
+    printf("***** MOSTRAR CANTIDAD DE ALMUERZOS POR CARRERA  ******** \n\n");
+
+    mostrarAlumnos(alumnos, tamA, carreras, tamC);
+
+    getInt(&legajo, "Ingrese LEGAJO: ", "Error, Reingrese LEGAJO: ");
+
+
+    for(int i=0; i<tamAlm; i++){
+        if(almuerzos[i].legajo == legajo){
+            for(int j=0; j<tamCom; j++){
+                if(comidas[j].id == almuerzos[i].idComida){
+                    acumulador+=comidas[j].precio;
+                }
+            }
+        }
+    }
+    printf("El Alumno debe: %.2f ", acumulador );
+
+
+}
 
