@@ -17,6 +17,7 @@ void mostrarEnteros(int* x, int tam){
 
     for(int i=0; i < tam; i++){
         printf("%d ", *(x+i));
+        //printf(" %d ", x[i]);
     }
 
 }

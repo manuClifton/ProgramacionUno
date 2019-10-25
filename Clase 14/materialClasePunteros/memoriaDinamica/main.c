@@ -4,10 +4,11 @@
 
 int main()
 {
+    // MEMORIA ESTATICA
     int x;
     char y;
     float z;
-
+    // MEMORIA DINAMICA
     int* a = (int*) malloc(sizeof(int));
 
    if( a == NULL){

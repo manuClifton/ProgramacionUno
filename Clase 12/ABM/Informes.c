@@ -441,7 +441,7 @@ void mostrarDeudaAlumno(eAlumno alumnos[], int tamA, eAlmuerzo almuerzos[], int 
     int legajo;
 
     system("cls");
-    printf("***** MOSTRAR CANTIDAD DE ALMUERZOS POR CARRERA  ******** \n\n");
+    printf("***** MOSTRAR DEUDA DE ALUMMNO SELECCIONADO ******** \n\n");
 
     mostrarAlumnos(alumnos, tamA, carreras, tamC);
 

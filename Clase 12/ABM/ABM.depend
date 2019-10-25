@@ -317,7 +317,7 @@
 	<conio.h>
 	"carrera.h"
 
-1570227806 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.c
+1570578692 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -344,13 +344,14 @@
 	"almuerzo.h"
 	"comidas.h"
 
-1570197092 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\almuerzo.c
+1570229472 source:c:\users\manu_\desktop\programacionuno\clase 12\abm\almuerzo.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	<conio.h>
 	"almuerzo.h"
+	"biblioteca.h"
 
 1570197091 c:\users\manu_\desktop\programacionuno\clase 12\abm\almuerzo.h
 	"comidas.h"
