@@ -73,6 +73,7 @@ eEmpleado* newEmpleado(){
     return e;
 }
 
+/////////////// FUNCIOIN COSTRUCTORA CON PARAMETROS
 eEmpleado* newEmpleadoParam(int* id, char* nombre, float sueldo){
     eEmpleado* e = newEmpleado();
 

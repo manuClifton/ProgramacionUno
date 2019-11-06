@@ -96,3 +96,80 @@
 	"Employee.h"
 	"auto.h"
 
+1572903222 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\auto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"auto.h"
+
+1572903222 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\auto.h
+
+1572999705 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"stdlib.h"
+	"LinkedList.h"
+	"parser.h"
+	"Employee.h"
+	"auto.h"
+
+1572903222 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\linkedlist.h
+
+1572908505 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\employee.h
+	"LinkedList.h"
+
+1572999705 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\employee.c
+	"Employee.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"stdlib.h"
+
+1572999721 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"stdlib.h"
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"biblioteca.h"
+	"menu.h"
+
+1572910212 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\controller.h
+
+1572999704 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"stdlib.h"
+	"LinkedList.h"
+	"Employee.h"
+	"auto.h"
+
+1572907310 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\menu.h
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+
+1572908345 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\menu.c
+	"menu.h"
+	"biblioteca.h"
+
+1570620994 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"biblioteca.h"
+
+1570620994 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\biblioteca.h
+
+1572903222 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\parser.h
+

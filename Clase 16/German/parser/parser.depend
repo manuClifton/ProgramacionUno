@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1572309760 source:c:\users\alumno\desktop\parser\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1572300840 source:c:\users\manu_\desktop\programacionuno\clase 16\german\parser\main.c
+	<stdio.h>
+	<stdlib.h>
+

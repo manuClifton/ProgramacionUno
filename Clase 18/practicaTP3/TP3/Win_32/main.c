@@ -8,7 +8,8 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
-#include "auto.h"
+#include "biblioteca.h"
+#include "menu.h"
 
 /****************************************************
     Menu:
@@ -27,16 +28,94 @@
 
 int main()
 {
-    int option = 0;
+    char salir = 'N';
+    int flagLoadLinkedList = 0;
+    int devolution;
+
     LinkedList* listaEmploye = ll_newLinkedList();
 
     do{
-        switch(option)
+        switch(menu())
         {
             case 1:
-                controller_loadFromText("data.csv",listaEmploye);
+                if(flagLoadLinkedList == 0){
+                    devolution=controller_loadFromText("data.csv",listaEmploye);
+                    if(devolution==1)
+                    {
+                        printf("\n   **********************\n");
+                        printf("   * Cargo Exitosamente *\n");
+                        printf("   **********************\n\n");
+                        flagLoadLinkedList=1;
+                    }
+                    else if (devolution==0)
+                    {
+                        printf("\n   *******************\n");
+                        printf("   * Error al cargar *\n");
+                        printf("   *******************\n\n");
+                    }
+                }else{
+                    printf("\n   *********************\n");
+                    printf("   * Ya estan cargados *\n");
+                    printf("   *********************\n\n");
+                }
                 break;
+            case 2:
+                if(flagLoadLinkedList == 0){
+                    devolution=controller_loadFromBinary("data.bin",listaEmploye);
+                    if(devolution==1)
+                    {
+                        printf("\n   **********************\n");
+                        printf("   * Cargo Exitosamente *\n");
+                        printf("   **********************\n\n");
+
+                        flagLoadLinkedList=1;
+                    }
+                    else if (devolution==0)
+                    {
+                        printf("\n   *******************\n");
+                        printf("   * Error al cargar *\n");
+                        printf("   *******************\n\n");
+                    }
+                }else{
+                    printf("\n   *********************\n");
+                    printf("   * Ya estan cargados *\n");
+                    printf("   *********************\n\n");
+                }
+
+                system("pause");
+                break;
+            case 3:
+                //ALTA EMPLEADO
+                break;
+            case 4:
+                //MODIFICAR
+                break;
+            case 5:
+                //BAJA
+                break;
+            case 6:
+                //MOSTRAR
+                showEmployees(listaEmploye);
+                break;
+            case 7:
+                // ORDENAR EMPLEADOS
+                break;
+            case 8:
+                // GUARDAR EN TEXTO
+                break;
+            case 9:
+                // GUARDAR EN BINARIO
+                break;
+            case 10:
+                getChar(&salir,"Desea Salir?  S o N: ","Error. Ingrese S o N: ", 'S', 'N');
+                printf("\n\n");
+            default:
+                printf("\n\nOPCION INVALIDA!! \n\n");
+            break;
         }
-    }while(option != 10);
+        system("pause");
+
+    }while(salir == 'N');
+
     return 0;
 }

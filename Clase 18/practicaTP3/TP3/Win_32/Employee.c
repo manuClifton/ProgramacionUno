@@ -1,7 +1,13 @@
 
 #include "Employee.h"
-#include "stdlib.h"
+
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+#include <conio.h>
+#include "stdlib.h"
+
 
 int employee_setId(Employee* listaEmployee,int id)
 {
@@ -32,7 +38,7 @@ int employee_getId(Employee* listaEmployee,int* id)
 int employee_setNombre(Employee* listaEmployee, char* nombre)
 {
     int result=0;
-    if( listaEmployee != NULL && nombre != NULL && strlen(nombre) >= 3 && strlen(nombre) <= 127)
+    if( listaEmployee != NULL && nombre != NULL && strlen(nombre) >= 2 && strlen(nombre) <= 127)
     {
         strcpy(listaEmployee->nombre, nombre);
         result = 1;
@@ -113,19 +119,49 @@ Employee* employee_new(){
     return nuevo;
 }
 
+
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr,char* sueldoStr){
     Employee* nuevo = employee_new();
     if( nuevo != NULL)
     {
         if(idStr!=NULL && nombreStr!=NULL && horasTrabajadasStr!=NULL && sueldoStr!=NULL)
         {
-            if(!(employee_setId(nuevo, atoi(idStr)) && employee_setNombre(nuevo,nombreStr) && employee_setHorasTrabajadas(nuevo,atoi(horasTrabajadasStr)) && employee_setSueldo(nuevo,atoi(sueldoStr)) ) == 0 ){
+            if(    !employee_setId(nuevo, atoi(idStr))
+                || !employee_setNombre(nuevo,nombreStr)
+                || !employee_setHorasTrabajadas(nuevo,atoi(horasTrabajadasStr))
+                || !employee_setSueldo(nuevo,atoi(sueldoStr)) )
+            {
             free(nuevo);
             nuevo = NULL;
             }
 
         }
     }
+
     return nuevo;
 }
 
+void showEmployee(Employee* emp){
+    if(emp!=NULL){
+       printf("%4d  %10s  %5d      %5d\n",emp->id,emp->nombre,emp->horasTrabajadas,emp->sueldo);
+    }
+}
+
+void showEmployees(LinkedList* pArrayLinkedList){
+    int tam;
+
+    printf(" ID     Nombre     Horas    Sueldo\n");
+    printf("------------------------------------\n");
+
+    if(ll_len(pArrayLinkedList) == 0){
+            printf("NO HAY EMPLEADOS QUE MOSTRAR\n\n");
+    }
+
+    if(pArrayLinkedList != NULL){
+        tam = ll_len(pArrayLinkedList);
+        for(int i=0; i<tam; i++){
+            showEmployee((Employee*) ll_get(pArrayLinkedList, i));
+        }
+
+    }
+}

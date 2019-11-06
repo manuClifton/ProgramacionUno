@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "stdlib.h"
 #include "LinkedList.h"
+#include "parser.h"
 #include "Employee.h"
 #include "auto.h"
 
@@ -15,7 +16,23 @@
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+     FILE* pFile = NULL;
+    int result=0;
+
+    if(path != NULL && pArrayListEmployee != NULL){
+        pFile= fopen(path,"r");
+        if(pFile==NULL)
+        {
+            result=0;
+        }
+        else
+        {
+          result = parser_EmployeeFromText(pFile, pArrayListEmployee);
+        }
+    }
+    fclose(pFile);
+
+    return result;
 }
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo binario).
@@ -27,7 +44,23 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+    FILE* pFile = NULL;
+    int result=0;
+
+    if(path != NULL && pArrayListEmployee != NULL){
+        pFile = fopen(path,"rb");
+        if(pFile==NULL)
+        {
+            result=0;
+        }
+        else
+        {
+          result = parser_EmployeeFromBinary(pFile, pArrayListEmployee);
+        }
+    }
+    fclose(pFile);
+
+    return result;
 }
 
 /** \brief Alta de empleados
@@ -102,7 +135,7 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
     return 1;
 }
 
-/** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
+/** \brief Guarda los datos de los empleados en el archivo data.bin (modo binario).
  *
  * \param path char*
  * \param pArrayListEmployee LinkedList*
