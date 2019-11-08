@@ -106,7 +106,7 @@
 
 1572903222 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\auto.h
 
-1572999705 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\controller.c
+1573170305 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\controller.c
 	<stdio.h>
 	<stdlib.h>
 	"stdlib.h"
@@ -120,7 +120,7 @@
 1572908505 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\employee.h
 	"LinkedList.h"
 
-1572999705 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\employee.c
+1573170318 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\employee.c
 	"Employee.h"
 	<stdio.h>
 	<stdlib.h>
@@ -129,7 +129,7 @@
 	<conio.h>
 	"stdlib.h"
 
-1572999721 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\main.c
+1573170305 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -142,9 +142,9 @@
 	"biblioteca.h"
 	"menu.h"
 
-1572910212 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\controller.h
+1573170305 c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\controller.h
 
-1572999704 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\parser.c
+1572999948 source:c:\users\manu_\desktop\programacionuno\clase 18\practicatp3\tp3\win_32\parser.c
 	<stdio.h>
 	<stdlib.h>
 	"stdlib.h"

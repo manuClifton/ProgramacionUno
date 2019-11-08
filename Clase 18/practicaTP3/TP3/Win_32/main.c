@@ -31,6 +31,7 @@ int main()
     char salir = 'N';
     int flagLoadLinkedList = 0;
     int devolution;
+    int flagBuffer=0;
 
     LinkedList* listaEmploye = ll_newLinkedList();
 
@@ -85,37 +86,157 @@ int main()
                 system("pause");
                 break;
             case 3:
-                //ALTA EMPLEADO
-                break;
+                devolution=controller_addEmployee(listaEmploye);
+                    if(devolution==1)
+                    {
+                        printf("\n   *************************************\n");
+                        printf("   * Cargo nuevo empleado Exitosamente *\n");
+                        printf("   *************************************\n\n");
+
+                        flagBuffer=1;
+                    }
+                    else if(devolution==0)
+                    {
+                        printf("\n   ***********************\n");
+                        printf("   * Se cancelo la carga *\n");
+                        printf("   ***********************\n\n");
+                    }
+                    else
+                    {
+                        printf("\n   ******************************\n");
+                        printf("   * Error al cargar el nuevo empleado *\n");
+                        printf("   ******************************\n\n");
+                    }
+                system("pause");
+                    break;
+
             case 4:
-                //MODIFICAR
-                break;
+                system("cls");
+                devolution=controller_editEmployee(listaEmploye);
+                    if(devolution==2){
+                        printf("\n   *****************************\n");
+                        printf("   * No se encontro ninguna ID *\n");
+                        printf("   *****************************\n\n");
+                    }
+                    else if(devolution==1){
+                        printf("\n   *******************************\n");
+                        printf("   * Se edito de manera correcta *\n");
+                        printf("   *******************************\n\n");
+                    }
+                    else if(devolution==-1){
+                        printf("\n   ***************************************\n");
+                        printf("   * No se pudo realizar por algun error *\n");
+                        printf("   ***************************************\n\n");
+                    }
+
+                system("pause");
+                    break;
+
             case 5:
-                //BAJA
-                break;
+                devolution=controller_removeEmployee(listaEmploye);
+                    if(devolution==-1){
+                        printf("\n   *********************\n");
+                        printf("   * Error al eliminar *\n");
+                        printf("   *********************\n\n");
+                    }
+                    else if(devolution==0){
+                        printf("\n   **********************\n");
+                        printf("   * La baja se cancelo *\n");
+                        printf("   **********************\n\n");
+                    }
+                    else if(devolution==1){
+                        printf("\n   ************************************\n");
+                        printf("   * La baja se realizo correctamente *\n");
+                        printf("   ************************************\n\n");
+                    }
+                    else if(devolution==2){
+                        printf("\n   ********************************************\n");
+                        printf("   * No se encontro ningun usuario con esa ID *\n");
+                        printf("   ********************************************\n\n");
+                    }
+
+                system("pause");
+                    break;
+
             case 6:
-                //MOSTRAR
-                showEmployees(listaEmploye);
+                if(!flagBuffer &&  !flagLoadLinkedList  ){
+                    printf("\n   ******************************\n");
+                    printf("   * No hay ningun dato cargado *\n");
+                    printf("   ******************************\n\n");
+                }
+                else
+                {
+                    system("cls");
+                    showEmployees(listaEmploye);
+                    printf("\n\n");
+                }
+                system("pause");
                 break;
             case 7:
-                // ORDENAR EMPLEADOS
+                if(!flagBuffer && !flagLoadLinkedList){
+                        printf("\n   ******************************\n");
+                        printf("   * No hay ningun dato cargado *\n");
+                        printf("   ******************************\n\n");
+                }else{
+                    controller_sortEmployee(listaEmploye);
+                }
+
+                system("pause");
                 break;
             case 8:
-                // GUARDAR EN TEXTO
-                break;
+                       devolution = controller_saveAsText("./data.csv",listaEmploye);
+                       if(devolution == 1){
+                            printf("\n   ********************************\n");
+                            printf("   * Se Guardo de manera correcta *\n");
+                            printf("   ********************************\n\n");
+                            flagLoadLinkedList=0;
+                            flagBuffer=0;
+                            ll_deleteLinkedList(listaEmploye);
+                            listaEmploye=ll_newLinkedList();
+                       }else{
+                            printf("\n   *******************************\n");
+                            printf("   * Ocurrio un Error al Guardar *\n");
+                            printf("   *******************************\n\n");
+                       }
+                       system("pause");
+                        break;
             case 9:
-                // GUARDAR EN BINARIO
-                break;
+                       devolution = controller_saveAsBinary("./data.bin",listaEmploye);
+                       if(devolution == 1){
+                            printf("\n   ********************************\n");
+                            printf("   * Se Guardo de manera correcta *\n");
+                            printf("   ********************************\n\n");
+                            flagLoadLinkedList=0;
+                            flagBuffer=0;
+                            ll_deleteLinkedList(listaEmploye);
+                            listaEmploye=ll_newLinkedList();
+                       }else{
+                            printf("\n   *******************************\n");
+                            printf("   * Ocurrio un Error al Guardar *\n");
+                            printf("   *******************************\n\n");
+                       }
+                       system("pause");
+                        break;
             case 10:
                 getChar(&salir,"Desea Salir?  S o N: ","Error. Ingrese S o N: ", 'S', 'N');
                 printf("\n\n");
+
             default:
-                printf("\n\nOPCION INVALIDA!! \n\n");
+                printf("\n   ******************************\n");
+                printf("   * Opcion invalida. Reingrese *\n");
+                printf("   ******************************\n\n");
+                 system("pause");
             break;
         }
         system("pause");
 
     }while(salir == 'N');
 
+    if(salir == 'S'){
+                printf("\n ******************************\n");
+                printf("   **********  ADIOS  ***********\n");
+                printf("   ******************************\n\n");
+                 system("pause");
+    }
     return 0;
 }
