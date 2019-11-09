@@ -77,7 +77,8 @@ int main()
                         printf("   * Error al cargar *\n");
                         printf("   *******************\n\n");
                     }
-                }else{
+                }
+                else{
                     printf("\n   *********************\n");
                     printf("   * Ya estan cargados *\n");
                     printf("   *********************\n\n");
@@ -86,7 +87,8 @@ int main()
                 system("pause");
                 break;
             case 3:
-                devolution=controller_addEmployee(listaEmploye);
+                if(flagLoadLinkedList == 1){
+                    devolution=controller_addEmployee(listaEmploye);
                     if(devolution==1)
                     {
                         printf("\n   *************************************\n");
@@ -107,12 +109,19 @@ int main()
                         printf("   * Error al cargar el nuevo empleado *\n");
                         printf("   ******************************\n\n");
                     }
+                }
+                else{
+                    printf("\n   *********************************************\n");
+                    printf("   * Primero debe cargar los datos del archivo *\n");
+                    printf("   *********************************************\n\n");
+                }
+
                 system("pause");
                     break;
 
             case 4:
-                system("cls");
-                devolution=controller_editEmployee(listaEmploye);
+                if(flagBuffer == 1 || flagLoadLinkedList == 1){
+                    devolution=controller_editEmployee(listaEmploye);
                     if(devolution==2){
                         printf("\n   *****************************\n");
                         printf("   * No se encontro ninguna ID *\n");
@@ -128,12 +137,19 @@ int main()
                         printf("   * No se pudo realizar por algun error *\n");
                         printf("   ***************************************\n\n");
                     }
+                }
+                else{
+                    printf("\n   ******************************\n");
+                    printf("   * No hay ningun dato cargado *\n");
+                    printf("   ******************************\n\n");
+                }
 
                 system("pause");
                     break;
 
             case 5:
-                devolution=controller_removeEmployee(listaEmploye);
+                if(flagBuffer == 1 || flagLoadLinkedList == 1){
+                    devolution=controller_removeEmployee(listaEmploye);
                     if(devolution==-1){
                         printf("\n   *********************\n");
                         printf("   * Error al eliminar *\n");
@@ -154,6 +170,13 @@ int main()
                         printf("   * No se encontro ningun usuario con esa ID *\n");
                         printf("   ********************************************\n\n");
                     }
+                }
+                else{
+                    printf("\n   ******************************\n");
+                    printf("   * No hay ningun dato cargado *\n");
+                    printf("   ******************************\n\n");
+                }
+
 
                 system("pause");
                     break;
@@ -167,7 +190,8 @@ int main()
                 else
                 {
                     system("cls");
-                    showEmployees(listaEmploye);
+                    //showEmployees(listaEmploye);
+                    controller_ListEmployee(listaEmploye);
                     printf("\n\n");
                 }
                 system("pause");

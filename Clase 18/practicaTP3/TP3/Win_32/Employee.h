@@ -28,4 +28,11 @@ int employee_getHorasTrabajadas(Employee* listaEmployee,int* horasTrabajadas);
 int employee_setSueldo(Employee* listaEmployee,int sueldo);
 int employee_getSueldo(Employee* listaEmployee,int* sueldo);
 
+int buscarPorId(LinkedList* pArrayListEmployee, int id);
+
+int orderID(void* emp1, void* emp2);
+int orderSalary(void* emp1, void* emp2);
+int orderHours(void* emp1, void* emp2);
+int orderName(void* emp1, void* emp2);
+
 #endif // employee_H_INCLUDED

@@ -4,17 +4,17 @@
 	<ActiveTarget name="Debug" />
 	<File name="Controller.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="675" topLine="0" />
+			<Cursor1 position="617" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Employee.c" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3055" topLine="138" />
+			<Cursor1 position="7041" topLine="272" />
 		</Cursor>
 	</File>
-	<File name="Controller.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+	<File name="Employee.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2704" topLine="140" />
+			<Cursor1 position="1022" topLine="19" />
 		</Cursor>
 	</File>
 	<File name="LinkedList.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -24,17 +24,17 @@
 	</File>
 	<File name="biblioteca.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1247" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="Employee.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="215" topLine="9" />
+			<Cursor1 position="4408" topLine="189" />
 		</Cursor>
 	</File>
 	<File name="biblioteca.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="660" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6008" topLine="132" />
 		</Cursor>
 	</File>
 	<File name="menu.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -49,7 +49,7 @@
 	</File>
 	<File name="parser.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2096" topLine="45" />
+			<Cursor1 position="1333" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="parser.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -57,9 +57,9 @@
 			<Cursor1 position="152" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+	<File name="Controller.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5387" topLine="116" />
+			<Cursor1 position="10292" topLine="415" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
